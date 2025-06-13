@@ -41,17 +41,15 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("No users found.")
         return
 
-    message = "📋 *User Panel List:*
-
-"
-    for user in users:
-        message += (
-            f"👤 `{user['username']}`\n"
-            f"🔑 Pass: `{user['password']}`\n"
-            f"🕒 Duration: {user['duration']} days\n"
-            f"📱 Device Limit: {user['device_limit']}\n"
-            f"🔄 Status: *{user['status']}*\n\n"
-        )
+    message = "📋 *User Panel List:*\n\n"
+for user in users:
+    message += (
+        f"👤 `{user['username']}`\n"
+        f"🔑 Pass: `{user['password']}`\n"
+        f"🕒 Duration: {user['duration']} days\n"
+        f"📱 Device Limit: {user['device_limit']}\n"
+        f"🔄 Status: *{user['status']}*\n\n"
+    )
     await update.message.reply_markdown(message)
 
 async def create_new(update: Update, context: ContextTypes.DEFAULT_TYPE):
