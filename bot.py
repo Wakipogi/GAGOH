@@ -104,7 +104,7 @@ def run_api():
 # Start bot + API
 if __name__ == "__main__":
     threading.Thread(target=run_api).start()
-    app = Application.builder().token(os.getenv("BOT_TOKEN")).build()
+    app = Application.builder().token(os.getenv("7483922524:AAHEgbnUh-A9ZoAORbCLANNlvBKbh7nlmSw")).build()
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("create_new", create_new)],
         states={
