@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: login-panel
-    env: python
-    buildCommand: ""
-    startCommand: python main.py
-    plan: free
