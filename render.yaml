@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: telegram-flask-panel
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: replace_with_your_bot_token
